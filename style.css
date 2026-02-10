@@ -1,0 +1,371 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #0f0f1a;
+  color: #fff;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* ===== NAVBAR ===== */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px 8%;
+  background: rgba(15, 15, 26, 0.95);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 600;
+  color: #ff5fa2;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a:hover {
+  color: #ff5fa2;
+}
+
+.resume-btn {
+  background: #ff5fa2;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+/* ===== HAMBURGER ===== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  margin: 4px 0;
+}
+
+/* ===== HERO ===== */
+.hero {
+  min-height: 100vh;
+  padding: 120px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero h1 {
+  font-size: 48px;
+}
+
+.hero span {
+  color: #ff5fa2;
+}
+
+.hero p {
+  margin: 15px 0;
+  color: #ccc;
+}
+
+.hero img {
+  width: 230px;
+  border-radius: 50%;
+  border: 5px solid #ff5fa2;
+}
+
+/* ===== BUTTONS ===== */
+.btns a {
+  display: inline-block;
+  margin-right: 15px;
+  padding: 10px 22px;
+  border-radius: 25px;
+  background: #ff5fa2;
+}
+
+.btns .outline {
+  background: transparent;
+  border: 2px solid #ff5fa2;
+}
+
+/* ===== SECTIONS ===== */
+section {
+  padding: 80px 8%;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #ff5fa2;
+}
+
+/* ===== ABOUT ===== */
+/* ===== ABOUT SECTION ===== */
+.about {
+  padding: 80px 20px;
+}
+
+.about-container {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.about-pic {
+  width: 220px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.about-text .headline {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.about-text ul {
+  margin: 12px 0;
+  padding-left: 18px;
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-pic {
+    width: 160px;
+  }
+}
+
+
+/* Mobile */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-pic {
+    width: 140px;          /* mobile size */
+    height: 140px;
+  }
+}
+
+
+/* ===== SKILLS ===== */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.skills span {
+  background: #1f1f2e;
+  padding: 10px 18px;
+  border-radius: 20px;
+}
+
+/* ===== PROJECTS ===== */
+.project {
+  display: flex;
+  background-color: #ff5fa2;
+  gap: 30px;
+  align-items: center;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.project img {
+  width: 300px;
+  border-radius: 12px;
+}
+
+.project-info p {
+  color: #ccc;
+}
+
+/* ===== CONTACT ===== */
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contact-icons a {
+  font-size: 22px;
+  background: #ff5fa2;
+  padding: 12px;
+  border-radius: 50%;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: palevioletred;
+  text-align: center;
+  padding: 20px;
+  color: whitesmoke;
+  font-weight: bolder;
+}
+/* ===== FLOATING HYPERLINK ICONS ===== */
+/* FLOATING ICONS BASE */
+/* FLOATING ICONS */
+.floating-icons {
+  position: fixed;
+  right: 20px;
+  bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  z-index: 999;
+}
+
+/* ICON BASE */
+.floating-icons a {
+  width: 50px;
+  height: 50px;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 22px;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s;
+  animation: floatIdle 4s ease-in-out infinite;
+}
+
+/* SLOW FLOATING IDLE */
+@keyframes floatIdle {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* PULSE GLOW EVERY 3s */
+.floating-icons a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 rgba(255,255,255,0); }
+  50% { box-shadow: 0 0 18px rgba(255,255,255,0.5); }
+  100% { box-shadow: 0 0 0 rgba(255,255,255,0); }
+}
+
+/* HOVER */
+.floating-icons a:hover {
+  transform: scale(1.12);
+}
+
+/* BRAND COLORS */
+a[title="Email"]:hover { background:#ea4335; box-shadow:0 0 20px #ea4335; }
+a[title="GitHub"]:hover { background:#24292e; box-shadow:0 0 20px #24292e; }
+a[title="LinkedIn"]:hover { background:#0a66c2; box-shadow:0 0 20px #0a66c2; }
+
+a[title="Instagram"]:hover {
+  background: linear-gradient(45deg,#f58529,#dd2a7b,#8134af,#515bd4);
+  box-shadow:0 0 24px #dd2a7b;
+}
+
+a[title="Pinterest"]:hover { background:#e60023; box-shadow:0 0 20px #e60023; }
+
+/* 🎵 SPOTIFY SOUND WAVE */
+.spotify:hover i {
+  animation: soundWave 0.8s infinite ease-in-out;
+}
+
+@keyframes soundWave {
+  0% { transform: scaleY(1); }
+  50% { transform: scaleY(1.4); }
+  100% { transform: scaleY(1); }
+}
+
+
+
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #0f0f1a;
+    width: 100%;
+    flex-direction: column;
+    display: none;
+    padding: 20px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .resume-btn {
+    display: none;
+  }
+}
+@media (hover: none) {
+  .floating-icons a:hover {
+    transform: none;
+    animation: none;
+  }
+}

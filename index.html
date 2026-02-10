@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rugved Daphal | Portfolio</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <!-- NAVBAR -->
+  <nav>
+    <div class="logo">Rugved</div>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <a href="resume.pdf" class="resume-btn" download>Resume</a>
+
+    <div class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" role="button">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <h1>Hi, I'm <span>Rugved</span></h1>
+      <p>Computer Engineering Student | Full Stack Developer | AIML & IoT</p>
+      <div class="btns">
+        <a href="#contact">Contact</a>
+        <a href="#projects" class="outline">Projects</a>
+      </div>
+    </div>
+    <img src="propic.jpeg" alt="Rugved Daphal" loading="lazy">
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about reveal" id="about">
+    <div class="about-container">
+      <img src="rugved.jpeg" class="about-pic" alt="Rugved Daphal" loading="lazy">
+
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p class="headline">I build scalable, clean, and user-focused digital systems.</p>
+
+        <ul>
+          <li>🎓 Computer Engineering Student</li>
+          <li>🤖 CWIT Alumni – Internet of Things</li>
+          <li>💻 Full Stack | AIML | IoT | Cloud Computing</li>
+        </ul>
+
+        <p class="philosophy">
+          I enjoy solving real-world problems using modern web technologies,
+          intelligent systems, and clean architecture.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <span>Java</span><span>C/C++</span><span>Cloud Computing</span>
+      <span>MERN</span><span>Node.js</span><span>MongoDB</span>
+      <span>AIML</span><span>IoT</span><span>Full Stack Development</span>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <div class="project">
+      <img src="personal website.webp" alt="Portfolio Website" loading="lazy">
+      <div class="project-info">
+        <h3>Portfolio Website</h3>
+        <p>Responsive portfolio using modern web technologies.</p>
+      </div>
+    </div>
+
+    <div class="project">
+      <img src="images.jpg" alt="IoT Magic Mirror" loading="lazy">
+      <div class="project-info">
+        <h3>IoT Magic Mirror</h3>
+        <p>Hybrid IoT & AIML based smart mirror.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-icons">
+      <a href="mailto:rugveddaphal11@gmail.com"><i class="fas fa-envelope"></i></a>
+      <a href="https://github.com/Rigved11" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/rugved11" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  © <span id="year"></span> Rugved Daphal
+</footer>
+
+<!-- FLOATING SOCIAL ICONS -->
+<div class="floating-icons">
+  <a href="mailto:rugveddaphal11@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+  <a href="https://github.com/Rigved11" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github"></i></a>
+  <a href="https://linkedin.com/in/rugved11" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+  <a href="https://www.instagram.com/urstrulyrugved" target="_blank" rel="noopener noreferrer" title="Instagram"><i class="fab fa-instagram"></i></a>
+  <a href="https://www.pinterest.com/rugveddaphal11" target="_blank" rel="noopener noreferrer" title="Pinterest"><i class="fab fa-pinterest"></i></a>
+  <a href="https://open.spotify.com/user/31irjp4xjbxje3v7jiacvu2tynbm" target="_blank" rel="noopener noreferrer" title="Spotify"><i class="fab fa-spotify"></i></a>
+</div>
+
+<!-- JS -->
+<script>
+  // Auto year
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // Hamburger Menu
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.getElementById("navLinks");
+
+  hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+    hamburger.setAttribute(
+      "aria-expanded",
+      navLinks.classList.contains("active")
+    );
+  });
+
+  // Floating icon hover effect
+  document.querySelectorAll(".floating-icons a").forEach(icon => {
+    icon.addEventListener("mousemove", e => {
+      const rect = icon.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+      icon.style.transform = `translate(${x * 0.15}px, ${y * 0.15}px) scale(1.12)`;
+    });
+
+    icon.addEventListener("mouseleave", () => {
+      icon.style.transform = "translate(0,0) scale(1)";
+    });
+  });
+
+  // Reveal on scroll
+  const reveals = document.querySelectorAll(".reveal");
+  window.addEventListener("scroll", () => {
+    reveals.forEach(el => {
+      if (el.getBoundingClientRect().top < window.innerHeight - 100) {
+        el.classList.add("active");
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
